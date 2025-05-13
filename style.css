@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in;
+}
+.quiz-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  opacity: 0;
+  animation: slideUp 0.6s forwards;
+  animation-delay: 0.5s;
+}
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  animation: fadeIn 0.8s ease-in-out;
+}
+#question-count {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease;
+}
+#timer {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease;
+}
+#question {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+.btn-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+button:hover:not(:disabled) {
+  background-color: #ddd;
+  transform: scale(1.03);
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.correct {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+.wrong {
+  background-color: #f44336;
+  color: white;
+  border-color: #f44336;
+}
+#next-btn {
+  margin-top: 20px;
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  animation: fadeIn 0.8s ease;
+}
+#next-btn:hover {
+  background-color: #0056b3;
+}
+#score-container {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  animation: fadeIn 1s ease-in;
+}
+.hide {
+  display: none;
+}
+body.dark {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+body.dark .quiz-container {
+  background-color: #2c2c2c;
+}
+body.dark button {
+  background-color: #444;
+  color: white;
+  border-color: #666;
+}
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
